@@ -1,26 +1,36 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Hello from './Screens/Screens';
+import Timeline from './Componets/Timeline';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      leds: 0,
+      data: []
+    }
+  }
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <Hello />
+          <Timeline />
+          <div style={{ position: 'absolute', top: 0, left: 24 }}>
+            <button>settings</button>
+          </div>
+        </header>
+      </div>
+    );
+  }
 }
 
-export default App;
+const dummy = [
+  {
+    id: 0,
+    color: 'black',
+
+  }
+]

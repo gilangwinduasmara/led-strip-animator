@@ -1,0 +1,11 @@
+.container {
+    width: 80%;
+    background-color: black;
+}
+
+.frame{
+    height: 24px;
+    width: 24px;
+    border-radius: 100;
+    background-color: white
+}
